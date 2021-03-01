@@ -1,24 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import './Style.css'
+import Sidepanel from './Componets/Sidepanel'
+import Leftpanel from './Componets/Leftpanel' 
+import Middlepanel from './Componets/Middlepanel'
+import Rightpanel from './Componets/Rightpanel'
+import Navpanel from './Componets/Navpanel'
+import {useState} from 'react';
 
-function App() {
+
+function App() { 
+  const [tid, setId] = useState([])
+
+  const changeId = (tid) => {
+        setId(tid)
+  }
+  console.log(tid)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container-fluid m-0 p-0">
+      <div class="toppane">
+      <Navpanel/>
+       </div>
+       <div class="leftpanefirst">
+      <Sidepanel />
+       </div>
+      <div class="leftpane">
+        <Leftpanel handleId={(tid) =>{
+        changeId(tid)
+      }}/>
+        </div>
+        <div class="middlepane">
+        <Middlepanel id={tid}/>
+        </div>
+        <div class="rightpane">
+        <Rightpanel />
+        </div>
+       
+        
+        
+       
+       
+</div>
+    
+  
   );
 }
 

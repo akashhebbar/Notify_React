@@ -1,0 +1,80 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
+.anyClass {
+  height:100vh;
+  overflow-y: scroll;
+}
+.navbar{
+  height:80px;
+}
+.leftpane {
+    width: 25%;
+    height: 100vh;
+    float: left;
+    text-align: left;
+    background-color: transparent;
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+.navbar-brand{
+  color:black;
+  font-size: larger;
+}
+
+.leftpanefirst {
+  width: 8%;
+  height: 100vh;
+  float: left;
+  background-color: rgb(33, 105, 199);
+  border-collapse: collapse;
+ 
+}
+.tab-space {
+  word-spacing: 30px;
+  padding-left:0em;
+}
+.aln{
+  padding-left:0em; 
+}
+.button4 {
+  border-radius: 20px;}
+.middlepane {
+    width: 40%;
+    padding: 10%;
+    height: 100vh;
+    float: left;
+    background-color: rgb(240, 242, 247);
+    padding: 15px;
+    border: black;
+}
+
+.rightpane {
+  width: 26%;
+  height: 100vh;
+  position: relative;
+  float: right;
+  background-color: transparent;
+  border-collapse: collapse;
+
+}
+.container {  
+  display: grid;  
+  grid-gap: 5px;  
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);  
+}
+
+
+.btn-xl {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.topimg{
+  padding-top: 30px;
+}
